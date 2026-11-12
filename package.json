@@ -1,0 +1,27 @@
+{
+  "name": "playwrightfremworkapproch1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:file": "playwright test tests/loginPageTest.spec.ts",
+    "test": "playwright test",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report",
+    "test:qa":"npx playwright test --congif=playwright.congif.qa.ts",
+    "test:uat":"npx playwright test --congif=playwright.congif.uat.ts"
+
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "@types/node": "^26.6.6",
+    "allure-commandline": "^2.46.1",
+    "allure-playwright": "^3.14.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^10.6.0",
+    "csv-parse": "^7.0.3"
+  }
+}
