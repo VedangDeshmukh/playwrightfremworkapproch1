@@ -98,14 +98,6 @@ jobs:
           path: playwright-report/
           retention-days: 30
 
-      - name: 📊 Upload Custom HTML Report
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: playwright-html-report-${{ github.event.inputs.environment }}
-          path: playwright-html-report/
-          retention-days: 30
-
       - name: 📊 Upload Allure Results
         uses: actions/upload-artifact@v4
         if: always()
@@ -220,7 +212,6 @@ jobs:
             <div class="env-section ${ENV}">
               <h3>📊 ${ENV^^} Environment Reports</h3>
               <a href="./${ENV}/playwright-report/index.html">Playwright Report</a>
-              <a href="./${ENV}/playwright-html-report/index.html">HTML Report</a>
               <a href="./${ENV}/allure-report/index.html">Allure Report</a>
             </div>
           </body>
