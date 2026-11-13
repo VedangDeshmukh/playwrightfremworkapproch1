@@ -1,0 +1,1 @@
+[{"uid":"d4ad85f6c1370e80","name":"verify the login to the application","time":{"start":1794556486747,"stop":1794556498065,"duration":11318},"status":"passed","severity":"normal"},{"uid":"ee4b6ab4e0c02ae","name":"verify the in-valid login to the application","time":{"start":1794556514608,"stop":1794556519113,"duration":4505},"status":"failed","severity":"normal"}]

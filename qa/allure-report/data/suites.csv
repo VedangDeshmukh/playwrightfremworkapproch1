@@ -1,0 +1,3 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Nov 13 07:54:46 UTC 2026","Fri Nov 13 07:54:58 UTC 2026","11318","Microsoft Edge","loginPageTest.spec.ts","","","","verify the login to the application",""
+"failed","Fri Nov 13 07:55:14 UTC 2026","Fri Nov 13 07:55:19 UTC 2026","4505","Microsoft Edge","loginPageTest.spec.ts","","","","verify the in-valid login to the application",""
