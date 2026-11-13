@@ -1,5 +1,11 @@
 name: Playwright & Allure Reports
 
+env:
+    ENV: qa
+    QA_BASE_URL: ${{ secrets.QA_BASE_URL }}
+    QA_USERNAME: ${{ secrets.QA_USERNAME }}
+    QA_PASSWORD: ${{ secrets.QA_PASSWORD }}
+
 on:
   workflow_dispatch:
   push:

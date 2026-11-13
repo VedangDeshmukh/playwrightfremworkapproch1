@@ -1,5 +1,18 @@
 import { defineConfig, devices } from '@playwright/test';
+import dotenv from 'dotenv'
 
+
+const ENV = process.env.ENV || "prod";
+dotenv.config({path:'./config/.env'})
+console.log('---Reading the env file---')
+let baseURL;
+let username;
+let password;
+if(ENV==="prod"){
+   baseURL = process.env.PROD_BASE_URL;
+   username = process.env.PROD_USERNAME;
+   password = process.env.PROD_PASSWORD;
+}
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv

@@ -1,4 +1,22 @@
 import { defineConfig, devices } from '@playwright/test';
+import dotenv from 'dotenv'
+
+
+const ENV = process.env.ENV || "stag";
+dotenv.config({path:'./config/.env'})
+console.log('---Reading the env file---')
+let baseURL;
+let username;
+let password;
+if(ENV==="stag"){
+   baseURL = process.env.STAGE_BASE_URL;
+   username = process.env.STAGE_USERNAME;
+   password = process.env.STAGE_PASSWORD;
+}
+
+console.log('Environment:', ENV);
+console.log('Base URL:', baseURL);
+
 
 /**
  * Read environment variables from file.
@@ -32,7 +50,7 @@ export default defineConfig({
   use: {
 
     /* Base URL to use in actions like `await page.goto('')`. */
-    baseURL: 'https://naveenautomationlabs.com/',
+    baseURL: baseURL,
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
@@ -42,8 +60,8 @@ export default defineConfig({
   },
 
   metadata:{
-    username:'toncrusetest26@gmail.com',
-    password:'Admin@123'
+    username:username,
+    password:password
   },
 
   /* Configure projects for major browsers */
